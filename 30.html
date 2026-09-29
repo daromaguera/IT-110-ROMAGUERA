@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  span {
+    background-color: lightblue;
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .display-block {
+    display: block;
+  }
+
+  .display-inline {
+    display: inline;
+  }
+
+  .display-inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+  }
+
+  .display-flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+  }
+
+  .display-none {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+  <h3>display: block</h3>
+  <span class="display-block">I'm a span, forced to act like a block</span>
+  <span class="display-block">Each one starts on a new line</span>
+
+  <h3>display: inline (default for span)</h3>
+  <span class="display-inline">I flow</span>
+  <span class="display-inline">right next to</span>
+  <span class="display-inline">each other</span>
+
+  <h3>display: inline-block</h3>
+  <span class="display-inline-block">Width + height work now</span>
+  <span class="display-inline-block">And I still sit inline</span>
+
+  <h3>display: flex (on the container)</h3>
+  <div class="display-flex">
+    <span>Item 1</span>
+    <span>Item 2</span>
+    <span>Item 3</span>
+  </div>
+
+  <h3>display: none</h3>
+  <span class="display-none">You will never see this text or its space</span>
+  <p>(the box above doesn't exist in the layout at all)</p>
+
+</body>
+</html>

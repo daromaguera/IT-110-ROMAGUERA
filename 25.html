@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .content-box {
+    box-sizing: content-box; /* default behavior */
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: lightblue;
+  }
+
+  .border-box {
+    box-sizing: border-box; /* padding + border included in the 200px */
+    width: 200px;
+    padding: 20px;
+    border: 5px solid black;
+    background-color: lightgreen;
+  }
+</style>
+</head>
+<body>
+
+  <div class="content-box">content-box: total width = 250px</div>
+  <br>
+  <div class="border-box">border-box: total width = 200px</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    position: relative; /* this becomes the "positioned ancestor" for .absolute-box */
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    margin-bottom: 100px;
+  }
+
+  .static-box {
+    position: static; /* default — just follows normal document flow */
+    background-color: lightblue;
+  }
+
+  .relative-box {
+    position: relative;
+    top: 10px;   /* nudges it 10px down from where it WOULD have been */
+    left: 10px;  /* nudges it 10px right from where it WOULD have been */
+    background-color: lightgreen;
+  }
+
+  .absolute-box {
+    position: absolute;
+    top: 20px;   /* 20px from the top of .container (nearest positioned ancestor) */
+    right: 20px; /* 20px from the right of .container */
+    background-color: orange;
+  }
+
+  .fixed-box {
+    position: fixed;
+    bottom: 10px;  /* stays 10px from the bottom of the BROWSER WINDOW */
+    right: 10px;   /* even while scrolling the page */
+    background-color: pink;
+  }
+</style>
+</head>
+<body>
+
+  <div class="static-box">Static (default, normal flow)</div>
+
+  <div class="relative-box">Relative (nudged from its own normal spot)</div>
+
+  <div class="container">
+    I am the positioned ancestor (position: relative)
+    <div class="absolute-box">Absolute (positioned relative to the gray container)</div>
+  </div>
+
+  <div class="fixed-box">Fixed (stays in place even when you scroll)</div>
+
+  <p>Scroll down to see the fixed box stay put...</p>
+  <div style="height: 1000px;"></div>
+
+</body>
+</html>

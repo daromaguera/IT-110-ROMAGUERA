@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 1 & 2. ::before and ::after — insert generated content
+     before/after an element's actual content, using double colons */
+  .quote::before {
+    content: "\201C"; /* opening curly quote “ */
+    font-weight: bold;
+    color: gray;
+  }
+  .quote::after {
+    content: "\201D"; /* closing curly quote ” */
+    font-weight: bold;
+    color: gray;
+  }
+
+  /* 3. ::first-line — styles only the first line of a text block */
+  .article::first-line {
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  /* 3. ::first-letter — styles only the first letter */
+  .article::first-letter {
+    font-size: 2em;
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+  <p class="quote">This is a famous quote</p>
+
+  <p class="article">
+    This paragraph has a decorative first letter and a bold first line,
+    all without adding a single extra span or tag in the HTML.
+  </p>
+
+</body>
+</html>

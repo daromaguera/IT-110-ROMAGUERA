@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .page-layout {
+    display: grid;                              /* turns this into a GRID container */
+    grid-template-columns: 200px 1fr;            /* defines 2 columns: fixed 200px, then flexible remaining space */
+    grid-template-rows: 80px 1fr 60px;           /* defines 3 rows: header, main content, footer */
+    gap: 10px;
+    height: 500px;
+  }
+
+  .header {
+    grid-column: 1 / 3; /* spans across both columns */
+    background-color: darkblue;
+    color: white;
+  }
+
+  .sidebar {
+    background-color: lightgray;
+  }
+
+  .main-content {
+    background-color: lightyellow;
+  }
+
+  .footer {
+    grid-column: 1 / 3; /* spans across both columns */
+    background-color: darkgreen;
+    color: white;
+  }
+
+  .page-layout > div {
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-layout">
+    <div class="header">Header (spans full width)</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main-content">Main Content</div>
+    <div class="footer">Footer (spans full width)</div>
+  </div>
+
+</body>
+</html>

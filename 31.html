@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Naturally a BLOCK element, but width/height still don't apply
+     the way you'd expect once we compare it to inline below */
+  .block-demo {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: lightblue;
+  }
+
+  /* Naturally an INLINE element (a tag), forced here just to show
+     that width/height are ignored on inline elements */
+  .inline-demo {
+    display: inline;
+    width: 200px;   /* ignored! */
+    height: 50px;   /* ignored! */
+    background-color: yellow;
+  }
+
+  /* Changing a <div>'s default display from block to inline,
+     to prove ANY element's default can be overridden */
+  .div-made-inline {
+    display: inline;
+    background-color: orange;
+  }
+</style>
+</head>
+<body>
+
+  <h3>display: block</h3>
+  <div class="block-demo">Full width, starts on a new line</div>
+  <div class="block-demo">This one too — stacked below the first</div>
+
+  <h3>display: inline</h3>
+  <span class="inline-demo">width/height are ignored here</span>
+  <span class="inline-demo">so both boxes end up the same small size</span>
+
+  <h3>A &lt;div&gt; forced to behave like inline</h3>
+  <div class="div-made-inline">I'm a div,</div>
+  <div class="div-made-inline">but I flow like text now,</div>
+  <div class="div-made-inline">not stacked on separate lines.</div>
+
+</body>
+</html>

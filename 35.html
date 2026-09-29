@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .box {
+    width: 200px;
+    height: 80px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    background-color: lightblue;
+  }
+
+  .overflow-visible {
+    overflow: visible; /* default — content spills outside the box */
+  }
+
+  .overflow-hidden {
+    overflow: hidden; /* clips anything that doesn't fit */
+  }
+
+  .overflow-scroll {
+    overflow: scroll; /* always shows scrollbars, even if not needed */
+  }
+
+  .overflow-auto {
+    overflow: auto; /* only shows scrollbars WHEN needed */
+  }
+</style>
+</head>
+<body>
+
+  <h3>overflow: visible (default)</h3>
+  <div class="box overflow-visible">
+    This text is intentionally long enough to overflow past the box's fixed height, and with visible, it just spills out past the border without being clipped or scrolled.
+  </div>
+
+  <h3>overflow: hidden</h3>
+  <div class="box overflow-hidden">
+    This text is intentionally long enough to overflow past the box's fixed height, but with hidden, anything past the edge is simply cut off and invisible.
+  </div>
+
+  <h3>overflow: scroll</h3>
+  <div class="box overflow-scroll">
+    This text is intentionally long enough to overflow past the box's fixed height, so with scroll, a scrollbar appears — and it would appear even if the text were short enough to fit.
+  </div>
+
+  <h3>overflow: auto</h3>
+  <div class="box overflow-auto">
+    This text is intentionally long enough to overflow past the box's fixed height, so with auto, a scrollbar appears only because it's actually needed here.
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .box {
+    width: 200px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+  }
+
+  .hidden-none {
+    display: none; /* completely removed — no space left behind */
+  }
+
+  .hidden-visibility {
+    visibility: hidden; /* invisible, but space is still reserved */
+  }
+</style>
+</head>
+<body>
+
+  <div class="box">Box 1 (normal, always visible)</div>
+
+  <div class="box hidden-none">Box 2 (display: none — you'll never see this text or its space)</div>
+
+  <div class="box hidden-visibility">Box 3 (visibility: hidden — invisible, but its space remains)</div>
+
+  <div class="box">Box 4 (normal, always visible)</div>
+
+</body>
+</html>

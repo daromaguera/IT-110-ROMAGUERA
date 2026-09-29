@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* 1. Universal selector — targets EVERY element on the page */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 2. Type selector — targets ALL <p> elements */
+    p {
+      color: black;
+      font-size: 16px;
+    }
+
+    /* 3 & 4. Type selectors set broad defaults, but a more specific
+      class selector overrides them where needed */
+    .highlight {
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>My Page</h1>
+  <p>This is a normal paragraph. (styled by the p{} rule — black, 16px)</p>
+  <p class="highlight">This paragraph is highlighted! (overridden by .highlight — red, 20px)</p>
+
+</body>
+</html>

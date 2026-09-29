@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 1 & 2. :hover — applies styles when the mouse is over the element */
+  button:hover {
+    background-color: darkblue;
+    color: white;
+  }
+
+  /* 3. :focus — applies styles when an input is selected/active */
+  input:focus {
+    border: 2px solid blue;
+    outline: none;
+  }
+
+  /* 4. :first-child and :last-child — target elements by position */
+  li:first-child {
+    color: green;
+  }
+  li:last-child {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+  <button>Hover over me</button>
+  <br><br>
+
+  <input type="text" placeholder="Click me to focus">
+
+  <ul>
+    <li>Item 1 (first-child — green)</li>
+    <li>Item 2</li>
+    <li>Item 3 (last-child — red)</li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .box-1 {
+    background-color: skyblue; /* color defined using a name */
+    padding: 20px;
+  }
+
+  .box-2 {
+    background-color: #ff6600; /* color defined using a hex code */
+    padding: 20px;
+  }
+
+  .box-3 {
+    background-color: rgba(0, 128, 0, 0.5); /* color defined using rgba() */
+    padding: 20px;
+  }
+
+  .box-4 {
+    background-image: url("pattern.jpg"); /* sets an image as the background */
+    padding: 20px;
+    color: white;
+  }
+
+  .box-5 {
+    background-color: purple;
+    opacity: 0.4; /* controls transparency of the ENTIRE element, including text */
+    padding: 20px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+  <div class="box-1">Named color (skyblue)</div>
+  <div class="box-2">Hex code (#ff6600)</div>
+  <div class="box-3">rgba() with 50% transparency</div>
+  <div class="box-4">Background image</div>
+  <div class="box-5">Opacity affects everything, even this text</div>
+
+</body>
+</html>

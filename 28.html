@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .page {
+    width: 500px;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+  }
+
+  /* 1. margin: auto — centers a BLOCK element horizontally */
+  .box-1 {
+    width: 200px;
+    background-color: lightblue;
+    margin: 0 auto; /* top/bottom = 0, left/right = auto */
+  }
+
+  /* 2. text-align: center — centers TEXT/inline content inside a block */
+  .box-2 {
+    text-align: center;
+    background-color: lightgreen;
+  }
+
+  /* 3. Flexbox — centers horizontally AND vertically */
+  .box-3 {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    height: 150px;
+    background-color: lightyellow;
+  }
+  .flex-child {
+    background-color: orange;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="page">
+    <div class="box-1">I'm a block, centered with margin: auto</div>
+  </div>
+
+  <div class="page box-2">
+    <p>This text is centered with text-align: center</p>
+  </div>
+
+  <div class="page box-3">
+    <div class="flex-child">Centered both ways using Flexbox</div>
+  </div>
+
+</body>
+</html>
